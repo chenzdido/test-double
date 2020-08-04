@@ -1,21 +1,24 @@
-package stub;
-
+package Mockito;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import stub.GradeService;
+import stub.GradeSystem;
+import stub.StubGradeSystem;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.mock;
 
-public class GradeServiceTest {
-    /* 需求描述：
-    编写GradeService类的单元测试，单元测试calculateAverageGrades方法
-    * */
-    private StubGradeSystem stubGradeSystem;
+public class GradServiceTest {
+
+    private GradeSystem stubGradeSystem;
     private GradeService gradeService;
 
     @BeforeEach
     public void setup(){
-        stubGradeSystem=new StubGradeSystem();
+        stubGradeSystem= mock(GradeSystem.class);
         gradeService=new GradeService(stubGradeSystem);
     }
 
