@@ -11,7 +11,7 @@ import static org.mockito.Mockito.mock;
 
 public class SecurityCenterTest {
     private SecurityCenter securityCenter;
-    public  DoorPanel mockDoorPanel ;
+    DoorPanel mockDoorPanel ;
     @BeforeEach
     public void setUp() {
         mockDoorPanel=mock(DoorPanel.class);;
